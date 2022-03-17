@@ -77,6 +77,11 @@ SNOWFLAKE_ACCOUNT=the_account_name
 pytest ./tests -v 
 ```
 
+**NOTE:** You may find that the first test "Snowflake Version" may fail. This is likely to be because Snowflake have updated their client version since this repository was last updated. In this case, please:
+
+- Login to the Snowflake web GUI and run `select current_version();`
+- Replace the value in the [test_start.py](./tests/test_start.py) file with the result from the Snowflake GUI
+
 ### Getting started
 
 The skeleton of a possible solution is provided in `./solution/solution_start.py`
