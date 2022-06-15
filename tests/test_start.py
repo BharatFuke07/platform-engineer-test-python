@@ -9,7 +9,7 @@ class TestStart(object):
 
         version = snow.exec_query("SELECT CURRENT_VERSION();")
 
-        assert version.iloc[0]['CURRENT_VERSION()'] == '6.16.0', "Snowflake Version does not match the expected version."
+        assert version.iloc[0]['CURRENT_VERSION()'] == '6.18.3', "Snowflake Version does not match the expected version."
 
     def test_sqs_send_receive(self):
             MESSAGES = [
